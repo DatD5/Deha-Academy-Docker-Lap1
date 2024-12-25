@@ -3,9 +3,12 @@
 
 #1.
 git clone https://github.com/DatD5/Deha-Academy-Docker-Lap1.git
+
 cd Deha-Academy-Docker-Lap1
 
+
 ##2.Tạo Môi Trường Laravel với Laradock
+
 git clone https://github.com/Laradock/laradock.git
 
 cd laradock
