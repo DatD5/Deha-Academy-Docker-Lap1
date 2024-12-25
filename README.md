@@ -47,15 +47,19 @@ composer create-project --prefer-dist laravel/laravel laravel-app
 sửa 
 nginx:
 volumes:
+
       - ./nginx:/etc/nginx/conf.d
       - ./src:/var/www/html  # Mount thư mục src vào container
 
  php-fpm:
     volumes:
+    
       - ./src:/var/www/html  # Mount thư mục src vào container
 
 docker-compose down
+
 cd Deha-Academy-Docker-Lap
+
 docker-compose up -d
 
 http://localhost:8080
