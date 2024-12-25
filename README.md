@@ -42,3 +42,23 @@ docker-compose exec workspace bash
 
 composer create-project --prefer-dist laravel/laravel laravel-app
 
+
+## Sử dụng Docker image: nginx, php, mysql, sử dụng Dockerfile và Docker compose tạo môi trường chạy ứng dụng PHP.
+sửa 
+nginx:
+volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./src:/var/www/html  # Mount thư mục src vào container
+
+ php-fpm:
+    volumes:
+      - ./src:/var/www/html  # Mount thư mục src vào container
+
+docker-compose down
+cd Deha-Academy-Docker-Lap
+docker-compose up -d
+
+http://localhost:8080
+![Screenshot 2024-12-26 022059](https://github.com/user-attachments/assets/84b9572c-b6df-4341-8ca5-9212e269584d)
+
+
