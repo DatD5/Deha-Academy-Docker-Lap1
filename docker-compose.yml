@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx-container
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./src:/var/www/html
+    depends_on:
+      - php
+
+  php:
+    build:
+      context: .
+    container_name: php-container
+    volumes:
+      - ./src:/var/www/html
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: example_db
+    ports:
+      - "3306:3306"

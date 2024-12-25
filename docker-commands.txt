@@ -1,0 +1,23 @@
+# Docker Login & Logout
+docker login
+docker logout
+
+# Kiểm tra phiên bản Docker
+docker version
+
+# Quản lý Images
+docker pull nginx
+docker pull mysql
+docker images
+docker rmi <image_id>
+
+# Quản lý Containers
+docker build -t my-app .
+docker run -d --name my-container -p 8080:80 nginx
+docker exec -it my-container bash
+docker stop my-container
+docker rm my-container
+
+# Docker Compose
+docker-compose up -d
+docker-compose down

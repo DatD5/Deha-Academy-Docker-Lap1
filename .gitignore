@@ -1,0 +1,10 @@
+# Ignore node_modules và các file tạm thời
+node_modules/
+*.log
+
+# Ignore Laradock log và build files
+laradock/logs/
+laradock/data/
+
+# Ignore file hệ thống
+.DS_Store
