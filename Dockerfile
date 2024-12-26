@@ -1,5 +1,5 @@
 # Base image PHP với Apache
-FROM php:8.1-apache
+FROM php:8.1-fpm
 
 # Cài đặt các extension PHP cần thiết
 RUN docker-php-ext-install mysqli pdo pdo_mysql
