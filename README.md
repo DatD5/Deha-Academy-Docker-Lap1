@@ -28,6 +28,13 @@ NGINX_HOST_HTTP_PORT=8081
 
 MYSQL_VERSION=8.0
 
+
+cd nginx/sites
+
+Edit default.conf:
+
+root /var/www/laravel/public;
+
 #4.Khởi động Laradock:
 
 docker-compose up -d nginx mysql workspace
@@ -65,4 +72,11 @@ docker-compose up -d
 http://localhost:8080
 ![Screenshot 2024-12-26 022059](https://github.com/user-attachments/assets/84b9572c-b6df-4341-8ca5-9212e269584d)
 
+## Sử dụng Laradock để tạo môi trường chạy Laravel
+
+docker-compose down
+
+cd laradock
+
+docker-compose up -d nginx
 
