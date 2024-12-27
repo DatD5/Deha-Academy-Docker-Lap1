@@ -33,7 +33,7 @@ cd nginx/sites
 
 Edit default.conf:
 
-root /var/www/laravel/public;
+root /var/www/laravel-app/public;
 
 #4.Khởi động Laradock:
 
@@ -47,7 +47,7 @@ docker-compose exec workspace bash
 
 -Cài đặt Laravel:
 
-composer create-project --prefer-dist laravel/laravel laravel-app
+composer create-project  laravel/laravel laravel-app
 
 
 ## Sử dụng Docker image: nginx, php, mysql, sử dụng Dockerfile và Docker compose tạo môi trường chạy ứng dụng PHP.
